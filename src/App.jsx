@@ -36,31 +36,29 @@ function App() {
         <>
           {err && <p>Invalid username or password</p>}
           <form onSubmit={handleSubmit}>
-            <label htmlFor="username">
-              Username:
-              <input
-                id="username"
-                placeholder="username"
-                value={userData.username}
-                name="username"
-                type="text"
-                required
-                onChange={(e) => handleChange(e)}
-              />
-            </label>
+            <label htmlFor="username">Username:</label>
+            <input
+              id="username"
+              placeholder="username"
+              value={userData.username}
+              name="username"
+              type="text"
+              required
+              onChange={(e) => handleChange(e)}
+            />
+
             <br />
-            <label htmlFor="password">
-              Password:
-              <input
-                id="password"
-                placeholder="password"
-                value={userData.password}
-                name="password"
-                type="password"
-                required
-                onChange={(e) => handleChange(e)}
-              />
-            </label>
+            <label htmlFor="password">Password:</label>
+            <input
+              id="password"
+              placeholder="password"
+              value={userData.password}
+              name="password"
+              type="password"
+              required
+              onChange={(e) => handleChange(e)}
+            />
+
             <br />
             <button type="submit">Submit</button>
           </form>
