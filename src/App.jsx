@@ -6,7 +6,6 @@ function App() {
   const [err, setErr] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({
@@ -16,12 +15,14 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (userData.username === "user" && userData.password === "password") {
-      setLoggedIn(true);
-      setErr(false);
-    } else {
-      setErr(true);
+    if (userData.username === "" && userData.password === "") {
+      e.preventDefault();
+      if (userData.username === "user" && userData.password === "password") {
+        setLoggedIn(true);
+        setErr(false);
+      } else {
+        setErr(true);
+      }
     }
   };
 
