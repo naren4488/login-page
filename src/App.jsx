@@ -15,7 +15,7 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    if (userData.username === "" && userData.password === "") {
+    if (userData.username !== "" && userData.password !== "") {
       e.preventDefault();
       if (userData.username === "user" && userData.password === "password") {
         setLoggedIn(true);
