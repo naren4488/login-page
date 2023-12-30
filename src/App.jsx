@@ -39,6 +39,7 @@ function App() {
               Username:
               <input
                 id="username"
+                placeholder="username"
                 value={userData.username}
                 name="username"
                 type="text"
@@ -51,6 +52,7 @@ function App() {
               Password:
               <input
                 id="password"
+                placeholder="password"
                 value={userData.password}
                 name="password"
                 type="password"
